@@ -1,13 +1,14 @@
+<meta charset="ANSI">
 <link rel="icon" type=image/jpeg href="icon.png">
-<title>��������ʱ</title>
+<title>人生倒计时</title>
 <script src="jquery-3.6.0.min.js"></script>
- <!-- ʱ�䵹��ʱ���� -->
+ <!-- 时间倒计时代码 -->
     <div class="sidebar-box classListBox">
     <div class="aside aside-count">
-        <div class="p-3"><span style="font-size: 1.2em; color: orange;"><i class="fas fa-hourglass-half"></i></span> ��������ʱ</div>
+        <div class="p-3"><span style="font-size: 1.2em; color: orange;"><i class="fas fa-hourglass-half"></i></span> 人生倒计时</div>
         <div class="content">
             <div class="item" id="dayProgress">
-                <div class="title">�����Ѿ���ȥ<span></span>Сʱ</div>
+                <div class="title">今日已经过去<span></span>小时</div>
                 <div class="progress">
                     <div class="progress-bar">
                         <div class="progress-inner progress-inner-1"></div>
@@ -16,7 +17,7 @@
                 </div>
             </div>
             <div class="item" id="weekProgress">
-                <div class="title">�����Ѿ���ȥ<span></span>��</div>
+                <div class="title">这周已经过去<span></span>天</div>
                 <div class="progress">
                     <div class="progress-bar">
                         <div class="progress-inner progress-inner-2"></div>
@@ -25,7 +26,7 @@
                 </div>
             </div>
             <div class="item" id="monthProgress">
-                <div class="title">�����Ѿ���ȥ<span></span>��</div>
+                <div class="title">本月已经过去<span></span>天</div>
                 <div class="progress">
                     <div class="progress-bar">
                         <div class="progress-inner progress-inner-3"></div>
@@ -34,7 +35,7 @@
                 </div>
             </div>
             <div class="item" id="yearProgress">
-                <div class="title">�����Ѿ���ȥ<span></span>����</div>
+                <div class="title">今年已经过去<span></span>个月</div>
                 <div class="progress">
                     <div class="progress-bar">
                         <div class="progress-inner progress-inner-4"></div>
@@ -45,15 +46,15 @@
         </div>
     </div>
 </div>
-    <!-- ʱ�䵹��ʱ���� -->
+    <!-- 时间倒计时代码 -->
 <link rel="stylesheet" type="text/css" href="style.css">
 <script>
 function info() {
-document.write("����ҳ��<a href='https://neila-a.github.io'>neila</a>����<a href='https://www.baixiaomo360.com/2'>�����������ϵ�һƪ����</a>�ı�ɵľ�̬��ҳ��<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>ԭ����Э��</a><a href='https://github.com/neila-a/hexo-theme-yun/blob/dev/LICENSE'>�����뿪ԴЭ��</a>");
+document.write("此网页是<a href='https://neila-a.github.io'>neila</a>根据<a href='https://www.baixiaomo360.com/2'>白先生博客上的一篇文章</a>改编成的静态网页。<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>原代码协议</a><a href='https://github.com/neila-a/hexo-theme-yun/blob/dev/LICENSE'>本代码开源协议</a>");
 }
 </script>
-<!-- ����ʱ���õ�JS -->    
+<!-- 倒计时引用的JS -->    
 <script src="timeinfo.js"></script>
-<!-- ����ʱ���õ�JS --> 
+<!-- 倒计时引用的JS --> 
 <button class="info-button" onclick="info();"></button>
 
