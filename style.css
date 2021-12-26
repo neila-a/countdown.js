@@ -88,6 +88,7 @@
 }
 
 .info-button {
+display:inline-block;
 background:url(info.png);
 width: 36px;
 height: 36px;
