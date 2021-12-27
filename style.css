@@ -102,3 +102,12 @@ float: left;
 width: 38px;
 height: 38px;
 }
+
+.infopage-title {
+display:inline-block;
+float: right;
+}
+
+.infopage-titlebar {
+background: #06a1fb;
+}
