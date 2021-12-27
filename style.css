@@ -97,4 +97,7 @@ float: right;
 
 .back-button {
 background:url(back.jpeg);
+float: left;
+width: 36px;
+height: 36px;
 }
