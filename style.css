@@ -108,7 +108,8 @@ display:inline-block;
 float: right;
 }
 
-.infopage-titlebar {
+.infopage-titlebar
+{
 background: #06a1fb;
 background-size: 100% 36px;
 }
