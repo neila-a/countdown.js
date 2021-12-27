@@ -97,6 +97,7 @@ float: right;
 
 .back-button {
 background:url(back.jpeg);
+display:inline-block;
 float: left;
 width: 38px;
 height: 38px;
