@@ -28,7 +28,7 @@ function init_life_time() {
                 $('#weekProgress .progress .progress-percentage').html(parseInt(weekDayPassPercent) + '%');
                 let year = new Date().getFullYear();
                 let date = new Date().getDate();
-                let month = new Date().getMonth() + 1;
+                let month = new Date().getMonth();
                 let monthAll = new Date(year, month, 0).getDate();
                 let monthPassPercent = (date / monthAll) * 100;
                 $('#monthProgress .title span').html(date);
