@@ -96,6 +96,7 @@ float: right;
 }
 
 .back-button {
+text-indent:36px;
 background:url(back.jpeg);
 float: left;
 width: 40px;
