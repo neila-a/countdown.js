@@ -21,7 +21,7 @@ function init_life_time() {
                     5: 5,
                     6: 6
                 };
-                let weekDay = weeks[new Date().getDay() - 1];
+                let weekDay = weeks[new Date().getDay()] - 1;
                 let weekDayPassPercent = (weekDay / 7) * 100;
                 $('#weekProgress .title span').html(weekDay);
                 $('#weekProgress .progress .progress-inner').css('width', parseInt(weekDayPassPercent) + '%');
