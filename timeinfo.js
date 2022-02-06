@@ -21,13 +21,13 @@ function init_life_time() {
                     5: 5,
                     6: 6
                 };
-                let weekDay = weeks[new Date().getDay()];
+                let weekDay = weeks[new Date().getDay() - 1];
                 let weekDayPassPercent = (weekDay / 7) * 100;
                 $('#weekProgress .title span').html(weekDay);
                 $('#weekProgress .progress .progress-inner').css('width', parseInt(weekDayPassPercent) + '%');
                 $('#weekProgress .progress .progress-percentage').html(parseInt(weekDayPassPercent) + '%');
                 let year = new Date().getFullYear();
-                let date = new Date().getDate();
+                let date = new Date().getDate() - 1;
                 let month = new Date().getMonth();
                 let monthAll = new Date(year, month, 0).getDate();
                 let monthPassPercent = (date / monthAll) * 100;
