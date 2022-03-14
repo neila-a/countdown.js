@@ -1,12 +1,18 @@
 <meta charset="ANSI">
-<script src='https://neila-a.github.io/toolbox.js/toolbox.js'></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type=image/jpeg href="icon.png">
 <title>人生倒计时</title>
 <script src="jquery-3.6.0.min.js"></script>
+<script src="layui.js"></script>
+<script src="timeinfo.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="layui.css"> 
 <script>
 function alertinfo() {
-new alertbox('关于','此网页是<a href="https://neila-a.github.io\">neila</a>根据<a href="https://www.baixiaomo360.com/2">白先生博客上的一篇文章</a>改编成的静态网页。<a href="https://creativecommons.org/licenses/by/4.0/deed.zh">原代码协议</a>  |  <a href="https://github.com/neila-a/hexo-theme-yun/blob/dev/LICENSE">本代码开源协议</a>','info');
+    layui.layer.open({
+        title: "关于",
+        content: '此网页是<a href="https://neila-a.github.io\">neila</a>根据<a href="https://www.baixiaomo360.com/2">白先生博客上的一篇文章</a>改编成的静态网页。<a href="https://creativecommons.org/licenses/by/4.0/deed.zh">原代码协议</a>  |  <a href="https://github.com/neila-a/hexo-theme-yun/blob/dev/LICENSE">本代码开源协议</a>'
+    });
 }
 </script>
  <!-- 时间倒计时代码 -->
@@ -55,10 +61,5 @@ new alertbox('关于','此网页是<a href="https://neila-a.github.io\">neila</a
         </div>
     </div>
 </div>
-    <!-- 时间倒计时代码 -->
-<link rel="stylesheet" type="text/css" href="style.css">
-<!-- 倒计时引用的JS -->    
-<script src="timeinfo.js"></script>
-<!-- 倒计时引用的JS --> 
 
 
