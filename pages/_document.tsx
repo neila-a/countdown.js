@@ -10,13 +10,9 @@ class MyDocument extends Document {
             <Html lang="zh-cmn-Hans-CN">
                 <Head>
                     <meta charSet="utf-8" />
-                    <link rel="icon" href="/icon.png" type="image/png" />
-                    <link rel="manifest" href="/index.webmanifest" />
+                    <link rel="icon" href="icon.png" type="image/png" />
+                    <link rel="manifest" href="index.webmanifest" />
                     <meta name="description" content="人生倒计时"/>
-                    <meta
-                        name="viewport"
-                        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-                    />
                     <meta name="mobile-web-app-capable" content="yes" />
                     <meta name="apple-mobile-web-app-capable" content="yes" />
                     <meta name="application-name" content="LifeTimeCountDown" />

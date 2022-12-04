@@ -58,51 +58,60 @@ function Index(): JSX.Element {
     var [monthPassPercent, setMonthPassPercent] = useState<number>(1);
     var [month, setMonth] = useState<number>(1);
     var [yearPass, setYearPass] = useState<number>(1);
-    function init_life_time() {
-        function getAsideLifeTime() {
-            /* 褰撳墠鏃堕棿鎴� */
-            let nowDate = +new Date();
-            /* 浠婂ぉ寮€濮嬫椂闂存埑 */
-            let todayStartDate = new Date(new Date().toLocaleDateString()).getTime();
-            /* 浠婂ぉ宸茬粡杩囧幓鐨勬椂闂� */
-            let calcTodayPassHours = (nowDate - todayStartDate) / 1000 / 60 / 60;
-            /* 浠婂ぉ宸茬粡杩囧幓鐨勬椂闂存瘮 */
-            let calcTodayPassHoursPercent = (calcTodayPassHours / 24) * 100;
-            setTodayPassHours(calcTodayPassHours);
-            setTodayPassHoursPercent(calcTodayPassHoursPercent);
-            /* 褰撳墠鍛ㄥ嚑 */
-            let weeks = {
-                0: 7,
-                1: 1,
-                2: 2,
-                3: 3,
-                4: 4,
-                5: 5,
-                6: 6
-            };
-            let calcWeekDay = weeks[new Date().getDay()] - 1;
-            let calcWeekDayPassPercent = (calcWeekDay / 7) * 100;
-            setWeekDay(calcWeekDay);
-            setWeekDayPassPercent(calcWeekDayPassPercent);
-            let year = new Date().getFullYear();
-            let calcDate = new Date().getDate() - 1;
-            let calcMonth = new Date().getMonth();
-            let monthAll = new Date(year, calcMonth, 0).getDate();
-            let calcMonthPassPercent = (date / monthAll) * 100;
-            setDate(calcDate);
-            setMonthPassPercent(calcMonthPassPercent);
-            let calcYearPass = (month / 12) * 100;
-            setMonth(calcMonth);
-            setYearPass(calcYearPass);
-        }
-        getAsideLifeTime();/*
-        useEffect(function () {
+    useEffect(function () {
+        function init_life_time() {
+            function getAsideLifeTime() {
+                /* 褰撳墠鏃堕棿鎴� */
+                let nowDate = + new Date();
+                /* 浠婂ぉ寮€濮嬫椂闂存埑 */
+                let todayStartDate = new Date(new Date().toLocaleDateString()).getTime();
+                /* 浠婂ぉ宸茬粡杩囧幓鐨勬椂闂� */
+                let calcTodayPassHours = (nowDate - todayStartDate) / 1000 / 60 / 60;
+                /* 浠婂ぉ宸茬粡杩囧幓鐨勬椂闂存瘮 */
+                let calcTodayPassHoursPercent = (calcTodayPassHours / 24) * 100;
+                setTodayPassHours(calcTodayPassHours);
+                setTodayPassHoursPercent(calcTodayPassHoursPercent);
+                /* 褰撳墠鍛ㄥ嚑 */
+                let weeks = {
+                    0: 7,
+                    1: 1,
+                    2: 2,
+                    3: 3,
+                    4: 4,
+                    5: 5,
+                    6: 6
+                };
+                let calcWeekDay = weeks[new Date().getDay()] - 1;
+                let calcWeekDayPassPercent = (calcWeekDay / 7) * 100;
+                setWeekDay(calcWeekDay);
+                setWeekDayPassPercent(calcWeekDayPassPercent);
+                let year = new Date().getFullYear();
+                let calcDate = new Date().getDate() - 1;
+                let calcMonth = new Date().getMonth();
+                let monthAll = new Date(year, calcMonth, 0).getDate();
+                let calcMonthPassPercent = (date / monthAll) * 100;
+                setDate(calcDate);
+                setMonthPassPercent(calcMonthPassPercent);
+                let calcYearPass = (month / 12) * 100;
+                setMonth(calcMonth);
+                setYearPass(calcYearPass);
+            }
+            getAsideLifeTime();
             setInterval(() => {
                 getAsideLifeTime();
             }, 1000);
-        });*/
-    }
-    init_life_time();
+        }
+        init_life_time();
+    }, [
+        setTodayPassHours,
+        setTodayPassHoursPercent,
+        setWeekDay,
+        setWeekDayPassPercent,
+        setDate,
+        setMonthPassPercent,
+        setMonth,
+        setYearPass
+    ]);
     const [open, setOpen] = React.useState(false);
     const handleClickOpen = () => {
         setOpen(true);
@@ -138,7 +147,7 @@ function Index(): JSX.Element {
                                     此网页是
                                     <a href="https://neila.ga/">Neila</a>
                                     根据<a href="https://www.baixiaomo360.com/2">
-                                    白先生博客上的一篇文章</a>改编成的静态网页。
+                                        白先生博客上的一篇文章</a>改编成的静态网页。
                                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh">原代码协议</a>
                                     {"   |   "}
                                     <a href="https://www.gnu.org/licenses/gpl-3.0.html">本代码开源协议</a>
