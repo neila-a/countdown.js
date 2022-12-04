@@ -22,8 +22,8 @@ function Index(): JSX.Element {
                 let calcTodayPassHours = (nowDate - todayStartDate) / 1000 / 60 / 60;
                 /* 浠婂ぉ宸茬粡杩囧幓鐨勬椂闂存瘮 */
                 let calcTodayPassHoursPercent = (calcTodayPassHours / 24) * 100;
-                setTodayPassHours(calcTodayPassHours);
-                setTodayPassHoursPercent(calcTodayPassHoursPercent);
+                setTodayPassHours(parseInt(String(calcTodayPassHours)));
+                setTodayPassHoursPercent(parseInt(String(calcTodayPassHoursPercent)));
                 /* 褰撳墠鍛ㄥ嚑 */
                 let weeks = {
                     0: 7,
@@ -37,17 +37,17 @@ function Index(): JSX.Element {
                 let calcWeekDay = weeks[new Date().getDay()] - 1;
                 let calcWeekDayPassPercent = (calcWeekDay / 7) * 100;
                 setWeekDay(calcWeekDay);
-                setWeekDayPassPercent(calcWeekDayPassPercent);
+                setWeekDayPassPercent(parseInt(String(calcWeekDayPassPercent)));
                 let year = new Date().getFullYear();
                 let calcDate = new Date().getDate() - 1;
                 let calcMonth = new Date().getMonth();
                 let monthAll = new Date(year, calcMonth, 0).getDate();
                 let calcMonthPassPercent = (date / monthAll) * 100;
                 setDate(calcDate);
-                setMonthPassPercent(calcMonthPassPercent);
+                setMonthPassPercent(parseInt(String(calcMonthPassPercent)));
                 let calcYearPass = (month / 12) * 100;
                 setMonth(calcMonth);
-                setYearPass(calcYearPass);
+                setYearPass(parseInt(String(calcYearPass)));
             }
             getAsideLifeTime();
             setInterval(() => {
