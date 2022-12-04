@@ -1,2 +1,7 @@
 # countdown.js
-a life time countdown.
+
+一个人生倒计时
+
+## 使用
+
+访问<https://lifetime-countdown.js.org/>
