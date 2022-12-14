@@ -41,11 +41,11 @@ function Index(): JSX.Element {
                 let year = new Date().getFullYear();
                 let calcDate = new Date().getDate() - 1;
                 let calcMonth = new Date().getMonth();
-                let monthAll = new Date(year, calcMonth, 0).getDate();
-                let calcMonthPassPercent = (date / monthAll) * 100;
+                let monthAll = new Date(year, calcMonth, 0).getDate(); // 一个月有多少天
                 setDate(calcDate);
+                let calcMonthPassPercent = (calcDate / monthAll) * 100;
                 setMonthPassPercent(parseInt(String(calcMonthPassPercent)));
-                let calcYearPass = (month / 12) * 100;
+                let calcYearPass = (calcMonth / 12) * 100;
                 setMonth(calcMonth);
                 setYearPass(parseInt(String(calcYearPass)));
             }
@@ -82,7 +82,7 @@ function Index(): JSX.Element {
                             <i className="fas fa-hourglass-half"></i></span> 人生倒计时
                     </div>
                     <div className="content">
-                        <div className="item" id="dayProgress">
+                        <div className="item">
                             <div className="title">今日已经过去<span>{todayPassHours}</span>小时</div>
                             <div className="progress">
                                 <div className="progress-bar">
@@ -93,7 +93,7 @@ function Index(): JSX.Element {
                                 <div className="progress-percentage">{todayPassHoursPercent}%</div>
                             </div>
                         </div>
-                        <div className="item" id="weekProgress">
+                        <div className="item">
                             <div className="title">这周已经过去<span>{weekDay}</span>天</div>
                             <div className="progress">
                                 <div className="progress-bar">
@@ -104,7 +104,7 @@ function Index(): JSX.Element {
                                 <div className="progress-percentage">{weekDayPassPercent}%</div>
                             </div>
                         </div>
-                        <div className="item" id="monthProgress">
+                        <div className="item">
                             <div className="title">本月已经过去<span>{date}</span>天</div>
                             <div className="progress">
                                 <div className="progress-bar">
@@ -115,7 +115,7 @@ function Index(): JSX.Element {
                                 <div className="progress-percentage">{monthPassPercent}%</div>
                             </div>
                         </div>
-                        <div className="item" id="yearProgress">
+                        <div className="item">
                             <div className="title">今年已经过去<span>{month}</span>个月</div>
                             <div className="progress">
                                 <div className="progress-bar">
